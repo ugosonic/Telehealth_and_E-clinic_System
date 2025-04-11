@@ -1,0 +1,249 @@
+
+/* Dashboard Header */
+.dashboard-header {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dash-body{
+    height: 100vh;
+    margin-left: 96px;
+}
+/* Medical Records Table */
+.certification table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.certification table, 
+.certification th, 
+.certification td {
+    border: 1px solid #ddd;
+}
+.certification th, 
+.certification td {
+    padding: 10px;
+    text-align: left;
+}
+.certification th {
+    background-color: #2c3e50;
+    color: white;
+}
+.certification tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.certification tr:hover {
+    background-color: #ddd;
+}
+
+/* Pagination Links */
+.certification a {
+    color: #3498db;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+.certification a:hover {
+    background-color: #ddd;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .certification table, 
+    .certification th, 
+    .certification td, 
+    .certification tr {
+        display: block;
+        width: 100%;
+    }
+    .certification tr {
+        margin-bottom: 15px;
+    }
+    .certification th, 
+    .certification td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .certification th::before, 
+    .certification td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+    .certification th, 
+    .certification td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.btns {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btns:hover {
+    background-color: #0056b3;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    border: 1px solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative; /* To position the close button */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.modal form input[type="date"],
+.modal form select,
+.modal form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal form button:hover {
+    background-color: #2980b9;
+}
+
+.modal .btn-secondary {
+    background-color: #95a5a6;
+}
+
+.modal .btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.modal .btn-danger {
+    background-color: #e74c3c;
+}
+
+.modal .btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin-top: 10%;
+    }
+}
+/*search*/
+.search-section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+.search-section h2 {
+    margin-top: 0;
+}
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.search-form input[type="text"], .search-form button {
+    padding: 10px;
+    font-size: 16px;
+}
+.search-form button {
+    background-color: #34495e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.search-form button:hover {
+    background-color: #2c3e50;
+}
+.search-options {
+    display: flex;
+    gap: 10px;
+}

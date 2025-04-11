@@ -1,0 +1,94 @@
+/* Registration Container */
+.registration-container {
+    width: 936px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.dash-body{
+width: 139%;
+height: 100vh;
+}
+/* Form Heading */
+.registration-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Success and Error Messages */
+.success-message {
+    color: green;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Form Labels */
+.registration-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Form Inputs */
+.registration-container input[type="text"],
+.registration-container input[type="email"],
+.registration-container input[type="password"],
+.registration-container input[type="date"],
+.registration-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Form Submit Button */
+.registration-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.registration-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-subtitle {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .registration-container {
+        padding: 15px;
+    }
+}

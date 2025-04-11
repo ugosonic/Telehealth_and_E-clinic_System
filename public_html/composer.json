@@ -1,0 +1,27 @@
+{
+    "name": "vendor/project",
+    "type": "project",
+
+    "require": {
+        "php": "^8.1",
+        "pimcore/pimcore": "^11.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "codeception/codeception": "^5.1",
+        "codeception/module-phpbrowser": "^2.0",
+        "codeception/module-asserts": "^3.0",
+        "codeception/module-webdriver": "^4.0"
+    },
+    "config": {
+        "preferred-install": {
+            "pimcore/pimcore": "source",
+            "*": "dist"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

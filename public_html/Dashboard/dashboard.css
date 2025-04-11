@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.dashboard-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.small-containers, .large-containers, .bottom-containers {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Top small containers */
+.small-containers .card {
+    width: 30%;
+    height: 150px;
+}
+
+/* Middle large containers */
+.large-containers .card {
+    width: 48%;
+    height: 300px; /* Enough to display 10 names */
+    overflow-y: auto;
+}
+
+/* Bottom small containers */
+.bottom-containers .card {
+    width: 30%;
+    height: 150px;
+}
+

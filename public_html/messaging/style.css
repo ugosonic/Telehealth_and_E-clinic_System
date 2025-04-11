@@ -1,0 +1,350 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+/* Main Container Styling */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    padding-top: 35px;
+}
+
+
+/* Sidebar Styling */
+.message-sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-sidebar a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.message-sidebar a:hover {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+ /* Main Content Styling */
+ .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-left: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #ADD8E6;
+}
+
+/* Style for unread messages */
+tr.unread td {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Style for read messages */
+tr.read td {
+    font-weight: normal;
+    color: #999;
+}
+
+
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons a, .action-buttons button {
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.new-message-btn {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    margin-left: 80%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.new-message-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Form Styling */
+form {
+    padding: 20px;
+    background-color: #fff;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+ /* Nav Bar Styling */
+ nav.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    max-width: 92vw;
+}
+
+nav.message-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #fff;
+}
+
+nav.message-header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #0062cc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav.message-header a:hover {
+    background-color: #0056b3;
+    text-decoration: underline;
+}
+
+
+/* Status Indicators */
+.status-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.status-online {
+    background-color: green;
+}
+
+.status-meeting {
+    background-color: yellow;
+}
+
+.status-busy {
+    background-color: red;
+}
+
+.status-attending {
+    background-color: blue;
+}
+
+/* Inbox and Message Views */
+.message-list {
+    padding: 20px;
+}
+
+.message-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.message-item:hover {
+    background-color: #f9f9f9;
+}
+
+.message-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.message-time {
+    color: #999;
+    font-size: 14px;
+}
+
+.message-content {
+    margin-top: 10px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #f4f4f4;
+    color: #007bff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Error and Success Messages */
+.error-message {
+    color: red;
+    background-color: #ffe6e6;
+    border: 1px solid red;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.success-message {
+    color: green;
+    background-color: #e6ffec;
+    border: 1px solid green;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+/* Attachments */
+.attachment {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .inbox-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    table,
+    th,
+    td {
+        font-size: 14px;
+    }
+
+    .message-item {
+        padding: 8px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="file"],
+    select,
+    textarea {
+        width: calc(100% - 10px);
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}

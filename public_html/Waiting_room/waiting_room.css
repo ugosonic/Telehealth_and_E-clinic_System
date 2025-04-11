@@ -1,0 +1,451 @@
+/* Base Styling */
+body {
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f9;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+/* Container and Layout */
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+}
+
+.menu {
+    border-right: 1.5px solid rgb(235, 235, 235);
+    width: 21%;
+    height: 100vh;
+    box-shadow: 0 0px 0px 2px rgba(240, 240, 240, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+    z-index: 9999;
+    background-color: #fff;
+}
+
+.dash-body {
+    margin-left: -18%;
+    width: 133%;
+    height: 100vh;
+    overflow-y: auto;
+    /* padding: 20px; */
+    padding-top: 169px;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #34495e;
+}
+
+.profile-container, .menu-container {
+    width: 100%;
+    border-spacing: 0;
+    text-align: center;
+}
+
+.profile-title, .profile-subtitle {
+    padding-left: 8%;
+    text-align: left;
+}
+
+.profile-title {
+    font-weight: 500;
+    color: #161c2d;
+    font-size: 22px;
+}
+
+.profile-subtitle {
+    font-weight: 300;
+    color: #8492a6;
+    font-size: 15px;
+}
+
+.logout-btn {
+    margin-top: 30px;
+    width: 85%;
+}
+
+/* Tables and Lists */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Interactive Elements */
+.actions a {
+    background-color: #34495e;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.actions .cancel {
+    background-color: #e74c3c;
+}
+
+.actions a:hover {
+    opacity: 0.8;
+}
+
+/* Sidebar Styles */
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+    z-index: 9999;
+    background-color: #fff;
+}
+.logout-btn {
+    cursor: pointer;
+    padding: 8px 20px;
+    outline: none;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    background-color: #D8EBFA;
+    color: #1969AA;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+}
+
+.logout-btn:hover {
+    background-color: var(--primarycolor);
+    color: #fff;
+    box-shadow: 0 3px 5px 0 rgba(57, 108, 240, 0.3);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .menu, .dash-body {
+        width: 100%;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .actions a {
+        width: 48%;
+        margin-bottom: 5px;
+    }
+
+    #sidebar, #dismiss {
+        left: -250px;
+    }
+
+    #sidebar.active, #dismiss {
+        left: 0;
+    }
+
+    .overlay, #dismiss {
+        display: block;
+    }
+}
+
+.menu-btn {
+    padding: 6px;
+    color: #3b3b3b;
+    background-position: 30% 50%;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+.menu-text {
+    padding-left: 40%;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.menu-active {
+    color: var(--primarycolor);
+    border-right: 7px solid var(--primarycolor);
+}
+
+.menu-btn:hover {
+    background-color: var(--btnice);
+    color: var(--primarycolor);
+}
+
+.non-style-link-menu:link, .non-style-link-menu:visited, .non-style-link-menu:active {
+    text-decoration: none;
+    color: #3b3b3b;
+}
+
+.non-style-link-menu:hover {
+    text-decoration: none;
+    color: var(--primarycolor);
+}
+
+.non-style-link-menu-active:link, .non-style-link-menu-active:visited, .non-style-link-menu-active:active {
+    text-decoration: none;
+    color: var(--primarycolor);
+}
+
+/* Menu icons */
+.menu-icon-dashbord {
+    background-image: url('../img/icons/dashboard.svg');
+}
+
+.menu-icon-doctor {
+    background-image: url('../img/icons/doctors.svg');
+}
+
+.menu-icon-schedule {
+    background-image: url('../img/icons/schedule.svg');
+}
+
+.menu-icon-appoinment {
+    background-image: url('../img/icons/book.svg');
+}
+
+.menu-icon-patient {
+    background-image: url('../img/icons/patients.svg');
+}
+
+.menu-icon-settings {
+    background-image: url('../img/icons/settings.svg');
+}
+
+.menu-icon-session {
+    background-image: url('../img/icons/session.svg');
+}
+
+.menu-icon-home {
+    background-image: url('../img/icons/home.svg');
+}
+
+.menu-icon-dashbord:hover, .menu-icon-dashbord-active {
+    color: var(--primarycolor);
+    background-image: url('../img/icons/dashboard-hover.svg');
+}
+
+.menu-icon-doctor:hover, .menu-icon-doctor-active {
+    color: var(--primarycolor);
+    background-image: url('../img/icons/doctors-hover.svg');
+}
+
+.menu-icon-schedule:hover, .menu-icon-schedule-active {
+    color: var(--primarycolor);
+    background-image: url('../img/icons/schedule-hover.svg');
+}
+
+.menu-icon-appoinment:hover, .menu-icon-appoinment-active {
+    color: var(--primarycolor);
+    background-image: url('../img/icons/book-hover.svg');
+}
+
+.menu-icon-patient:hover, .menu-icon-patient-active {
+    color: var(--primarycolor);
+    background-image: url('../img/icons/patients-hover.svg');
+}
+
+.menu-icon-settings:hover, .menu-icon-settings-active {
+    color: var(--primarycolor);
+    background-image: url('../img/icons/settings-iceblue.svg');
+}
+
+.menu-icon-session:hover, .menu-icon-session-active {
+    color: var(--primarycolor);
+    background-image: url('../img/icons/session-iceblue.svg');
+}
+
+.menu-icon-home:hover, .menu-icon-home-active {
+    color: var(--primarycolor);
+    background-image: url('../img/icons/home-iceblue.svg');
+}
+
+.btn-icon-back {
+    background-image: url('../img/icons/back-iceblue.svg');
+    background-position: 18px 50%;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    padding: 8px 20px 8px 40px;
+}
+
+.btn-icon-back:hover {
+    background-image: url('../img/icons/back-white.svg');
+}
+
+.btn-edit {
+    background-image: url('../img/icons/edit-iceblue.svg');
+}
+
+.btn-edit:hover {
+    background-image: url('../img/icons/edit-white.svg');
+}
+
+.btn-view {
+    background-image: url('../img/icons/view-iceblue.svg');
+}
+
+.btn-view:hover {
+    background-image: url('../img/icons/view-white.svg');
+}
+
+.btn-delete {
+    background-image: url('../img/icons/delete-iceblue.svg');
+}
+
+.btn-delete:hover {
+    background-image: url('../img/icons/delete-white.svg');
+}
+
+.btn-filter {
+    background-image: url('../img/icons/filter-iceblue.svg');
+    background-position: 15px 50%;
+}
+
+.btn-filter:hover {
+    background-image: url('../img/icons/filter-white.svg');
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Animation Keyframes */
+@keyframes transitionIn-X {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes transitionIn-Y-over {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes transitionIn-Y-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

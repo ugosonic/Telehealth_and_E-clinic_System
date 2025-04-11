@@ -1,0 +1,17 @@
+{
+  "name": "webrtc-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node signaling-server.js",
+    "start-server": "node signaling-server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "ws": "^8.18.0"
+  }
+}

@@ -1,0 +1,6 @@
+actor: FunctionalTester
+modules:
+    enabled:
+        - PhpBrowser:
+            url: http://localhost/My%20Clinic/
+        - \Helper\Functional

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telehealth & E-Clinic System</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Animation for sliding texts */
+        .slide-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .slide-in.visible {
+            opacity: 1;
+            transform: none;
+        }
+        /* Heartbeat background animation */
+        .heartbeat-bg {
+            background: url('./img/heartbeat.gif') no-repeat center center fixed;
+            background-size: cover;
+            /*animation: heartbeat 2s infinite;*/
+        }
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25%, 75% {
+                transform: scale(1.05);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body class="heartbeat-bg">
+
+    <!-- Navigation Bar -->
+    <nav class="flex items-center justify-between flex-wrap bg-black-600 p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <span class="font-semibold text-xl tracking-tight">Telehealth & E-Clinic</span>
+        </div>
+        <div class="block lg:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20">
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            <div class="text-sm lg:flex-grow">
+                <!-- Empty for now -->
+            </div>
+            <div>
+                <a href="./Login/login.php" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</a>
+                <a href="./patient/patient.php" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center py-40">
+        <h1 class="text-5xl text-white font-bold mb-4 slide-in">Welcome to Our Telehealth & E-Clinic System</h1>
+        <p class="text-xl text-white slide-in">Providing seamless healthcare services at your fingertips.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <!-- Feature Item -->
+                <div class="w-full md:w-1/3 px-4 mb-8 slide-in">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <i class="fas fa-video fa-3x text-teal-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Video Consultation</h3>
+                        <p class="text-gray-700">Connect with healthcare professionals through secure video calls.</p>
+                    </div>
+                </div>
+                <!-- Feature Item -->
+                <div class="w-full md:w-1/3 px-4 mb-8 slide-in">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <i class="fas fa-calendar-alt fa-3x text-teal-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Appointments</h3>
+                        <p class="text-gray-700">Schedule appointments with doctors at your convenience.</p>
+                    </div>
+                </div>
+                <!-- Feature Item -->
+                <div class="w-full md:w-1/3 px-4 mb-8 slide-in">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <i class="fas fa-flask fa-3x text-teal-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Laboratory</h3>
+                        <p class="text-gray-700">Access lab services and view your test results online.</p>
+                    </div>
+                </div>
+                <!-- Feature Item -->
+                <div class="w-full md:w-1/3 px-4 mb-8 slide-in">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <i class="fas fa-medkit fa-3x text-teal-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Pharmacy</h3>
+                        <p class="text-gray-700">Order medications and get them delivered to your doorstep.</p>
+                    </div>
+                </div>
+                <!-- Feature Item for Non-Patients -->
+                <div class="w-full md:w-1/3 px-4 mb-8 slide-in">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <i class="fas fa-file-medical fa-3x text-teal-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Medical Records</h3>
+                        <p class="text-gray-700">Manage and access patient medical records securely.</p>
+                    </div>
+                </div>
+                <!-- Feature Item for Non-Patients -->
+                <div class="w-full md:w-1/3 px-4 mb-8 slide-in">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <i class="fas fa-users fa-3x text-teal-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Waiting Room</h3>
+                        <p class="text-gray-700">Monitor and manage patient queues effectively.</p>
+                    </div>
+                </div>
+                <!-- Staff Registration -->
+                <div class="w-full md:w-1/3 px-4 mb-8 slide-in">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <i class="fas fa-user-plus fa-3x text-teal-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Staff Registration</h3>
+                        <p class="text-gray-700">Enroll new staff members into the system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-teal-500 text-white text-center p-4">
+        &copy; 2024 Telehealth & E-Clinic System. All rights reserved.
+    </footer>
+
+    <!-- JavaScript for animations -->
+    <script>
+        // Function to handle slide-in animation
+        const sliders = document.querySelectorAll('.slide-in');
+        const appearOptions = {
+            threshold: 0,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        sliders.forEach(slider => {
+            appearOnScroll.observe(slider);
+        });
+    </script>
+</body>
+</html>
